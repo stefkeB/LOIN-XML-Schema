@@ -2,8 +2,75 @@
 <ns0:LevelOfInformationNeed xmlns:ns0="https://iso.org/2024/LOIN">
     <Specification name="Bridge_Handover_to_Client">
         <Description>LOIN for Bridge data at handover to client</Description>
-        <SpecificationPerObjectType>
-            <ns1:DataTemplate xmlns:ns1="http://tempuri.org/XMLSchema.xsd"/>
+        <Prerequisites purpose="Operation and Maintenance" informationDeliveryMilestone="Handover" sendingActor="Contractor" receivingActor="Client"/>
+        <SpecificationPerObjectType nodeID="6416a407-4de9-4b33-9dfa-0cc04c0825f1" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd">Specification for Wing Wall</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd">The lateral wall of a bridge abutment.</ns1:Definition>
+            <ns1:ReferenceDocument xmlns:ns1="http://tempuri.org/XMLSchema.xsd" resource="https://identifier.buildingsmart.org/uri/nbs/uniclass2015/1/class/Ss_20_50_10_95" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
+            <ns1:Object xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+            <ns1:SetOfProperties xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+            <Documentation nodeID="2bb0f705-a43c-4adf-85ae-3c2f73ea40b7">
+                <RequiredDocument type="Technical Drawing" purpose="Archive" content="Horizontal Projection"/>
+            </Documentation>
+            <GeometricalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
+                <Detail>L4</Detail>
+                <Dimensionality>D0</Dimensionality>
+                <Location>Relative</Location>
+                <Appearance>Textures</Appearance>
+                <ParametricBehaviour>ConstructiveGeometry</ParametricBehaviour>
+            </GeometricalInformation>
         </SpecificationPerObjectType>
     </Specification>
+    <ObjectTypes>
+        <ObjectType nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Wing Wall</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">The lateral wall of a bridge abutment.</ns1:Definition>
+        </ObjectType>
+    </ObjectTypes>
+    <AlphanumericalInformation>
+        <Property nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Width</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Width according to ISO XXX-YYY</ns1:Definition>
+            <ns1:DataType xmlns:ns1="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
+            <ns1:Unit xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+            <ns1:PhysicalQuantity xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+        </Property>
+        <Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Length</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Length according to ISO XXX-YYY</ns1:Definition>
+            <ns1:DataType xmlns:ns1="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
+            <ns1:Unit xmlns:ns1="http://tempuri.org/XMLSchema.xsd" resource="https://datadictionary2.org/cm"/>
+        </Property>
+        <PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Length</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Definition of length physical quantity</ns1:Definition>
+            <ns1:Dimensions xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+        </PhysicalQuantity>
+        <SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Dimensions</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Definition of the dimensions set of properties</ns1:Definition>
+            <ns1:Property xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616"/>
+            <ns1:Property xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="bc175904-b312-4caa-8b8a-5b130c239673"/>
+        </SetOfProperties>
+        <Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Lenght Dimensions</ns1:Name>
+            <ns1:DimensionExponentForAmountOfSubstance xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForAmountOfSubstance>
+            <ns1:DimensionExponentForElectricCurrent xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForElectricCurrent>
+            <ns1:DimensionExponentForLength xmlns:ns1="http://tempuri.org/XMLSchema.xsd">1</ns1:DimensionExponentForLength>
+            <ns1:DimensionExponentForLuminousIntensity xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForLuminousIntensity>
+            <ns1:DimensionExponentForMass xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForMass>
+            <ns1:DimensionExponentForThermodynamicTemperature xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForThermodynamicTemperature>
+            <ns1:DimensionExponentForTime xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:DimensionExponentForTime>
+        </Dimension>
+        <Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441" date="2024-06-14T10:17:03">
+            <ns1:Name xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter</ns1:Name>
+            <ns1:Definition xmlns:ns1="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter according to ISO 80000</ns1:Definition>
+            <ns1:Symbol xmlns:ns1="http://tempuri.org/XMLSchema.xsd">cm</ns1:Symbol>
+            <ns1:Dimension xmlns:ns1="http://tempuri.org/XMLSchema.xsd" nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+            <ns1:Scale xmlns:ns1="http://tempuri.org/XMLSchema.xsd">LINEAR</ns1:Scale>
+            <ns1:Base xmlns:ns1="http://tempuri.org/XMLSchema.xsd">TEN</ns1:Base>
+            <ns1:Coefficient xmlns:ns1="http://tempuri.org/XMLSchema.xsd">100</ns1:Coefficient>
+            <ns1:Offset xmlns:ns1="http://tempuri.org/XMLSchema.xsd">0</ns1:Offset>
+        </Unit>
+    </AlphanumericalInformation>
 </ns0:LevelOfInformationNeed>
