@@ -227,27 +227,26 @@ centimeter_unit.coefficient = 100
 centimeter_unit.offset = 0
 centimeter_unit_ref = ReferenceType(node_id=centimeter_unit.node_id)
 
-# a dictionary for the global namespaces
-#namespaces = {
-#  "ns0" : "https://iso.org/2024/LOIN",
-#  "ns1": "http://tempuri.org/XMLSchema.xsd"
-#}
+# a dictionary for the namespaces
+namespaces = {
+  "xml" : "http://www.w3.org/XML/1998/namespace",
+  "loin" : "https://iso.org/2024/LOIN",
+  "dt": "http://tempuri.org/XMLSchema.xsd"
+}
 
 # Create a SerializerConfig with custom settings
 serializer_config = SerializerConfig(
     # Enable pretty-printing (adds line breaks and indentation)
     pretty_print=True,
-    pretty_print_indent="    ",  # Indentation using 4 spaces (adjust as needed)
-#    globalns=namespaces
+    pretty_print_indent="    ",  # Indentation using 4 spaces (adjust as needed)    
 )
-
-
 
 # Serialize the object into an XML instance file
 serializer = XmlSerializer(config=serializer_config)
 
+
 # Here we serialize the root object
-xml_instance = serializer.render(my_loin)
+xml_instance = serializer.render(my_loin,  ns_map=namespaces)
 
 # Write the XML instance to a file
 with open("output.xml", "w") as f:
