@@ -1,42 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Container>
-    <Loin>
-        <Specification UUID="3f54f2bf-efb0-4a24-bfa5-43da577d7969" name="Bridge_Handover_to_Client">
-            <Description>LOIN for Bridge data at handover to client</Description>
-            <SpecificationPerObjectType UUID="317aab53-1538-4e0d-a702-233c1be1282f">
-                <ObjectType nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee" date="2024-06-14T10:17:03">
-                    <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Wing Wall</ns0:Name>
-                    <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="de">Flügelmauer</ns0:Name>
-                </ObjectType>
-                <AlphanumericalInformation nodeID="7687cb22-d98a-4d50-b2e8-0ec7f8ca6497" date="2024-06-14T10:17:03">
-                    <ns0:Object xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee"/>
-                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="cd029979-b8e5-492a-bb18-ff42cae17ecc"/>
-                    <ns0:Property xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="1bd4e74a-a7a8-4bfd-9bd2-a291a19b1324"/>
-                </AlphanumericalInformation>
-            </SpecificationPerObjectType>
-        </Specification>
-    </Loin>
-    <Object nodeID="ca4c1d79-fccf-4d44-bce8-88db884eb8ee" date="2024-06-14T10:17:03">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Wing Wall</ns0:Name>
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="de">Flügelmauer</ns0:Name>
-    </Object>
-    <Unit nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6" date="2024-06-14T10:17:03">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter</ns0:Name>
-        <ns0:Definition xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Centimeter according to ISO 80000</ns0:Definition>
-        <ns0:Symbol xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">cm</ns0:Symbol>
-        <ns0:Scale xmlns:ns0="http://tempuri.org/XMLSchema.xsd">LINEAR</ns0:Scale>
-        <ns0:Base xmlns:ns0="http://tempuri.org/XMLSchema.xsd">TEN</ns0:Base>
-        <ns0:Coefficient xmlns:ns0="http://tempuri.org/XMLSchema.xsd">100</ns0:Coefficient>
-        <ns0:Offset xmlns:ns0="http://tempuri.org/XMLSchema.xsd">0</ns0:Offset>
-    </Unit>
-    <Property nodeID="cd029979-b8e5-492a-bb18-ff42cae17ecc" date="2024-06-14T10:17:03">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Width</ns0:Name>
-        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
-        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6"/>
-    </Property>
-    <Property nodeID="1bd4e74a-a7a8-4bfd-9bd2-a291a19b1324" date="2024-06-14T10:17:03">
-        <ns0:Name xmlns:ns0="http://tempuri.org/XMLSchema.xsd" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:lang="en">Length</ns0:Name>
-        <ns0:DataType xmlns:ns0="http://tempuri.org/XMLSchema.xsd" name="REAL"/>
-        <ns0:Unit xmlns:ns0="http://tempuri.org/XMLSchema.xsd" nodeID="f4b89165-3682-4018-9d5d-1ae76dbba9e6"/>
-    </Property>
-</Container>
+<loin:LevelOfInformationNeed xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:loin="https://iso.org/2024/LOIN" xmlns:dt="http://tempuri.org/XMLSchema.xsd">
+    <Specification name="Bridge_Handover_to_Client">
+        <Description>LOIN for Bridge data at handover to client</Description>
+        <Prerequisites purpose="Operation and Maintenance" informationDeliveryMilestone="Handover" sendingActor="Contractor" receivingActor="Client"/>
+        <SpecificationPerObjectType nodeID="6416a407-4de9-4b33-9dfa-0cc04c0825f1" date="2024-06-14T10:17:03">
+            <dt:Name>Specification for Wing Wall</dt:Name>
+            <dt:Definition>The lateral wall of a bridge abutment.</dt:Definition>
+            <dt:ReferenceDocument resource="https://identifier.buildingsmart.org/uri/nbs/uniclass2015/1/class/Ss_20_50_10_95" nodeID="68ed2017-5370-48e4-a3bc-10f9833051df"/>
+            <dt:Object nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476"/>
+            <dt:SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef"/>
+            <Documentation nodeID="2bb0f705-a43c-4adf-85ae-3c2f73ea40b7">
+                <RequiredDocument type="Technical Drawing" purpose="Archive" content="Horizontal Projection"/>
+            </Documentation>
+            <GeometricalInformation nodeID="6775dba3-5a29-4cba-b15f-3b1c3b362ec1">
+                <Detail>L4</Detail>
+                <Dimensionality>D0</Dimensionality>
+                <Location>Relative</Location>
+                <Appearance>Textures</Appearance>
+                <ParametricBehaviour>ConstructiveGeometry</ParametricBehaviour>
+            </GeometricalInformation>
+        </SpecificationPerObjectType>
+    </Specification>
+    <ObjectTypes>
+        <ObjectType nodeID="2c9cf451-6070-42dc-bbc8-a71494be6476" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Wing Wall</dt:Name>
+            <dt:Definition xml:lang="en">The lateral wall of a bridge abutment.</dt:Definition>
+        </ObjectType>
+    </ObjectTypes>
+    <AlphanumericalInformation>
+        <Property nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Width</dt:Name>
+            <dt:Definition xml:lang="en">Width according to ISO XXX-YYY</dt:Definition>
+            <dt:DataType name="REAL"/>
+            <dt:Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441"/>
+            <dt:PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3"/>
+        </Property>
+        <Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Length</dt:Name>
+            <dt:Definition xml:lang="en">Length according to ISO XXX-YYY</dt:Definition>
+            <dt:DataType name="REAL"/>
+            <dt:Unit resource="https://datadictionary2.org/cm"/>
+        </Property>
+        <PhysicalQuantity nodeID="a0b4e8cc-452a-4c47-9043-d90ec5f4bfc3" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Length</dt:Name>
+            <dt:Definition xml:lang="en">Definition of length physical quantity</dt:Definition>
+            <dt:Dimensions nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+        </PhysicalQuantity>
+        <SetOfProperties nodeID="19f434c3-634d-4fcc-ba62-04106efb8eef" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Dimensions</dt:Name>
+            <dt:Definition xml:lang="en">Definition of the dimensions set of properties</dt:Definition>
+            <dt:Property nodeID="8ef0be47-929f-428a-9016-ec1e1f1f7616"/>
+            <dt:Property nodeID="bc175904-b312-4caa-8b8a-5b130c239673"/>
+        </SetOfProperties>
+        <Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Lenght Dimensions</dt:Name>
+            <dt:DimensionExponentForAmountOfSubstance>0</dt:DimensionExponentForAmountOfSubstance>
+            <dt:DimensionExponentForElectricCurrent>0</dt:DimensionExponentForElectricCurrent>
+            <dt:DimensionExponentForLength>1</dt:DimensionExponentForLength>
+            <dt:DimensionExponentForLuminousIntensity>0</dt:DimensionExponentForLuminousIntensity>
+            <dt:DimensionExponentForMass>0</dt:DimensionExponentForMass>
+            <dt:DimensionExponentForThermodynamicTemperature>0</dt:DimensionExponentForThermodynamicTemperature>
+            <dt:DimensionExponentForTime>0</dt:DimensionExponentForTime>
+        </Dimension>
+        <Unit nodeID="576c3391-b3a7-4c33-a4e3-2b503726f441" date="2024-06-14T10:17:03">
+            <dt:Name xml:lang="en">Centimeter</dt:Name>
+            <dt:Definition xml:lang="en">Centimeter according to ISO 80000</dt:Definition>
+            <dt:Symbol>cm</dt:Symbol>
+            <dt:Dimension nodeID="476c3391-b3a7-4c33-a4e3-2b503726f441"/>
+            <dt:Scale>LINEAR</dt:Scale>
+            <dt:Base>TEN</dt:Base>
+            <dt:Coefficient>100</dt:Coefficient>
+            <dt:Offset>0</dt:Offset>
+        </Unit>
+    </AlphanumericalInformation>
+</loin:LevelOfInformationNeed>

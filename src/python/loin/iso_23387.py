@@ -3,7 +3,6 @@ from enum import Enum
 from typing import List, Optional, Union
 from xsdata.models.datatype import XmlDateTime
 from loin.xml import LangValue
-from loin.utils import new_uuid
 
 __NAMESPACE__ = "http://tempuri.org/XMLSchema.xsd"
 
@@ -112,12 +111,6 @@ class ConceptType:
     class Meta:
         name = "conceptType"
 
-    date: XmlDateTime = field(
-        metadata={
-            "type": "Attribute",
-            "required": True,
-        }
-    )
     name: List[MultilingualTextType] = field(
         default_factory=list,
         metadata={
@@ -149,13 +142,20 @@ class ConceptType:
             "type": "Attribute",
         }
     )
-    node_id: str = field(
-        default_factory=new_uuid,
+    node_id: Optional[str] = field(
+        default=None,
         metadata={
             "name": "nodeID",
             "type": "Attribute",
             "required": True,
             "pattern": r"[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        }
+    )
+    date: Optional[XmlDateTime] = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "required": True,
         }
     )
 

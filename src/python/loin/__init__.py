@@ -1,18 +1,4 @@
-from loin.en_17412_3 import (
-    AppearanceEnum,
-    DetailEnum,
-    DimensionalityEnum,
-    Documentation,
-    GeometricalInformation,
-    LevelOfInformationNeed,
-    LocationEnum,
-    ParametricBehaviourEnum,
-    Prerequisites,
-    RequiredDocument,
-    Specification,
-    SpecificationPerObjectType,
-)
-from loin.iso_23887 import (
+from loin.iso_23387 import (
     Library,
     BaseType,
     ConceptType,
@@ -31,21 +17,23 @@ from loin.iso_23887 import (
     UnitType,
     ValuesType,
 )
+from loin.iso_7817_3 import (
+    AppearanceEnum,
+    DetailEnum,
+    DimensionalityEnum,
+    Documentation,
+    GeometricalInformation,
+    LevelOfInformationNeed,
+    LocationEnum,
+    ParametricBehaviourEnum,
+    Prerequisites,
+    RequiredDocument,
+    Specification,
+    SpecificationPerObjectType,
+)
 from loin.xml import LangValue
 
 __all__ = [
-    "AppearanceEnum",
-    "DetailEnum",
-    "DimensionalityEnum",
-    "Documentation",
-    "GeometricalInformation",
-    "LevelOfInformationNeed",
-    "LocationEnum",
-    "ParametricBehaviourEnum",
-    "Prerequisites",
-    "RequiredDocument",
-    "Specification",
-    "SpecificationPerObjectType",
     "Library",
     "BaseType",
     "ConceptType",
@@ -63,5 +51,17 @@ __all__ = [
     "ScaleType",
     "UnitType",
     "ValuesType",
+    "AppearanceEnum",
+    "DetailEnum",
+    "DimensionalityEnum",
+    "Documentation",
+    "GeometricalInformation",
+    "LevelOfInformationNeed",
+    "LocationEnum",
+    "ParametricBehaviourEnum",
+    "Prerequisites",
+    "RequiredDocument",
+    "Specification",
+    "SpecificationPerObjectType",
     "LangValue",
 ]
